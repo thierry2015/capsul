@@ -1,0 +1,36 @@
+{
+  "name": "trankil",
+  "version": "0.0.1",
+  "description": "",
+  "definition": "",
+  "homepage": "",
+  "author": {
+    "name": "Thierry Parent",
+    "url": "http://thierryparent.ca"
+  },
+  "license": "MIT",
+  "repository": {},
+  "bugs": {},
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "@absolunet/eslint-config-core": "0.3.0",
+    "cross-env": "^5.1",
+    "eslint-loader": "^2.0.0",
+    "jest": "^23.1.0",
+    "laravel-mix": "2.1.11",
+    "laravel-mix-eslint": "^0.1.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
